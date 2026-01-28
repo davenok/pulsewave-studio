@@ -18,5 +18,19 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/ui',
     '@pinia/nuxt'
-  ]
+  ],
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark'
+  },
+
+  app: {
+    head: {
+      title: 'Pulsewave Studio | Modern Web Design Agency',
+      meta: [
+        { name: 'description', content: 'Pulsewave Studio is a cutting-edge web design agency crafting digital experiences that captivate and convert.' }
+      ]
+    }
+  }
 })

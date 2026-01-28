@@ -1,24 +1,11 @@
 <template>
-  <div>
-    <UHeader>
-      <template #title>
-        <NuxtImg
-          src="/nuxt-starter-logo.png"
-          alt="Your Logo"
-          height="48"
-          class="my-1"
-        />
-      </template>
+  <div class="min-h-screen dark:bg-gray-950 bg-white">
+    <UiAppHeader />
 
-      <template #right>
-        <UColorModeButton />
-      </template>
-    </UHeader>
-
-    <UMain>
+    <main>
       <slot />
-    </UMain>
+    </main>
 
-    <UFooter />
+    <UiAppFooter />
   </div>
 </template>

@@ -6,19 +6,15 @@
     ]"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between h-16 md:h-20">
+      <nav class="flex items-center justify-between h-28 md:h-32">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2 group">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Icon name="i-lucide-zap" class="w-5 h-5 text-white" />
-            </div>
-            <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-          </div>
-          <span class="text-xl font-bold tracking-tight">
-            <span class="gradient-text-cyan">Pulsewave</span>
-            <span class="dark:text-white text-gray-900">Studio</span>
-          </span>
+        <NuxtLink to="/" class="group py-2">
+          <NuxtImg
+            src="/pulse-logo.png"
+            alt="Pulsewave Studio"
+            height="96"
+            class="h-20 md:h-24 w-auto transform group-hover:scale-105 transition-transform duration-300"
+          />
         </NuxtLink>
 
         <!-- Desktop Navigation -->

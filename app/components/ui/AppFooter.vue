@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative dark:bg-gray-950 bg-gray-50 pt-20 pb-8 overflow-hidden">
+  <footer class="relative bg-gray-950 pt-20 pb-8 overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-cyan-500/10 to-violet-500/10 blur-3xl" />
@@ -17,10 +17,10 @@
             </div>
             <span class="text-xl font-bold tracking-tight">
               <span class="gradient-text-cyan">Pulsewave</span>
-              <span class="dark:text-white text-gray-900">Studio</span>
+              <span class="text-white">Studio</span>
             </span>
           </NuxtLink>
-          <p class="dark:text-gray-400 text-gray-600 mb-6 leading-relaxed">
+          <p class="text-gray-400 mb-6 leading-relaxed">
             Crafting digital experiences that captivate, engage, and convert. Let's build something extraordinary together.
           </p>
           <div class="flex gap-4">
@@ -30,7 +30,7 @@
               :href="social.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-10 h-10 rounded-lg dark:bg-gray-800 bg-gray-200 flex items-center justify-center dark:text-gray-400 text-gray-600 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-violet-600 hover:text-white transition-all duration-300"
+              class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-violet-600 hover:text-white transition-all duration-300"
             >
               <Icon :name="social.icon" class="w-5 h-5" />
             </a>
@@ -39,14 +39,14 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-sm font-semibold dark:text-white text-gray-900 uppercase tracking-wider mb-6">
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">
             Quick Links
           </h4>
           <ul class="space-y-4">
             <li v-for="link in quickLinks" :key="link.label">
               <NuxtLink
                 :to="link.href"
-                class="dark:text-gray-400 text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 {{ link.label }}
               </NuxtLink>
@@ -56,12 +56,12 @@
 
         <!-- Services -->
         <div>
-          <h4 class="text-sm font-semibold dark:text-white text-gray-900 uppercase tracking-wider mb-6">
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">
             Services
           </h4>
           <ul class="space-y-4">
             <li v-for="service in services" :key="service">
-              <span class="dark:text-gray-400 text-gray-600">
+              <span class="text-gray-400">
                 {{ service }}
               </span>
             </li>
@@ -70,25 +70,25 @@
 
         <!-- Contact Info -->
         <div>
-          <h4 class="text-sm font-semibold dark:text-white text-gray-900 uppercase tracking-wider mb-6">
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">
             Get in Touch
           </h4>
           <ul class="space-y-4">
             <li class="flex items-center gap-3">
               <Icon name="i-lucide-mail" class="w-5 h-5 text-cyan-500" />
-              <a href="mailto:hello@pulsewave.studio" class="dark:text-gray-400 text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+              <a href="mailto:hello@pulsewave.studio" class="text-gray-400 hover:text-cyan-400 transition-colors">
                 hello@pulsewave.studio
               </a>
             </li>
             <li class="flex items-center gap-3">
               <Icon name="i-lucide-phone" class="w-5 h-5 text-cyan-500" />
-              <a href="tel:+1234567890" class="dark:text-gray-400 text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+              <a href="tel:+1234567890" class="text-gray-400 hover:text-cyan-400 transition-colors">
                 +1 (234) 567-890
               </a>
             </li>
             <li class="flex items-start gap-3">
               <Icon name="i-lucide-map-pin" class="w-5 h-5 text-cyan-500 mt-0.5" />
-              <span class="dark:text-gray-400 text-gray-600">
+              <span class="text-gray-400">
                 123 Innovation Drive<br />
                 San Francisco, CA 94107
               </span>
@@ -98,16 +98,16 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="border-t dark:border-gray-800 border-gray-200 pt-8">
+      <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="dark:text-gray-500 text-gray-500 text-sm">
+          <p class="text-gray-500 text-sm">
             © {{ currentYear }} Pulsewave Studio. All rights reserved.
           </p>
           <div class="flex gap-6 text-sm">
-            <NuxtLink to="/privacy" class="dark:text-gray-500 text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+            <NuxtLink to="/privacy" class="text-gray-500 hover:text-cyan-400 transition-colors">
               Privacy Policy
             </NuxtLink>
-            <NuxtLink to="/terms" class="dark:text-gray-500 text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+            <NuxtLink to="/terms" class="text-gray-500 hover:text-cyan-400 transition-colors">
               Terms of Service
             </NuxtLink>
           </div>

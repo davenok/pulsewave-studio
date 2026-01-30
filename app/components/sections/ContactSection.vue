@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="relative py-24 lg:py-32 overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 dark:bg-gray-900 bg-gray-50">
+    <div class="absolute inset-0 bg-gray-900">
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-pink-500/10 blur-3xl" />
     </div>
 
@@ -11,11 +11,11 @@
         <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-amber-500/10 text-amber-500 mb-4">
           Get in Touch
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold dark:text-white text-gray-900 mb-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Let's Build Something
           <span class="gradient-text">Amazing Together</span>
         </h2>
-        <p class="text-lg dark:text-gray-400 text-gray-600">
+        <p class="text-lg text-gray-400">
           Have a project in mind? We'd love to hear about it. Drop us a line and let's create something extraordinary.
         </p>
       </div>
@@ -30,7 +30,7 @@
                   v-model="form.name"
                   placeholder="John Doe"
                   size="lg"
-                  class="dark:bg-gray-800 bg-white"
+                  class="bg-gray-800"
                 />
               </UFormField>
               <UFormField label="Email" name="email">
@@ -39,7 +39,7 @@
                   type="email"
                   placeholder="john@example.com"
                   size="lg"
-                  class="dark:bg-gray-800 bg-white"
+                  class="bg-gray-800"
                 />
               </UFormField>
             </div>
@@ -49,7 +49,7 @@
                 v-model="form.company"
                 placeholder="Your company name"
                 size="lg"
-                class="dark:bg-gray-800 bg-white"
+                class="bg-gray-800"
               />
             </UFormField>
 
@@ -59,7 +59,7 @@
                 :items="projectTypes"
                 placeholder="Select a project type"
                 size="lg"
-                class="dark:bg-gray-800 bg-white"
+                class="bg-gray-800"
               />
             </UFormField>
 
@@ -69,7 +69,7 @@
                 :items="budgetRanges"
                 placeholder="Select your budget range"
                 size="lg"
-                class="dark:bg-gray-800 bg-white"
+                class="bg-gray-800"
               />
             </UFormField>
 
@@ -79,7 +79,7 @@
                 placeholder="Tell us about your project..."
                 :rows="5"
                 size="lg"
-                class="dark:bg-gray-800 bg-white"
+                class="bg-gray-800"
               />
             </UFormField>
 
@@ -98,14 +98,14 @@
         <!-- Contact Info -->
         <div class="lg:col-span-2 space-y-8">
           <!-- Info Cards -->
-          <div class="p-6 rounded-2xl dark:bg-gray-800/50 bg-white border dark:border-gray-700/50 border-gray-200">
+          <div class="p-6 rounded-2xl bg-gray-800/50 border border-gray-700/50">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center shrink-0">
                 <Icon name="i-lucide-mail" class="w-6 h-6 text-cyan-500" />
               </div>
               <div>
-                <h4 class="font-semibold dark:text-white text-gray-900 mb-1">Email Us</h4>
-                <p class="dark:text-gray-400 text-gray-600 text-sm mb-2">We'll respond within 24 hours</p>
+                <h4 class="font-semibold text-white mb-1">Email Us</h4>
+                <p class="text-gray-400 text-sm mb-2">We'll respond within 24 hours</p>
                 <a href="mailto:hello@pulsewave.studio" class="text-cyan-500 hover:text-cyan-400 font-medium">
                   hello@pulsewave.studio
                 </a>
@@ -113,14 +113,14 @@
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl dark:bg-gray-800/50 bg-white border dark:border-gray-700/50 border-gray-200">
+          <div class="p-6 rounded-2xl bg-gray-800/50 border border-gray-700/50">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 flex items-center justify-center shrink-0">
                 <Icon name="i-lucide-phone" class="w-6 h-6 text-violet-500" />
               </div>
               <div>
-                <h4 class="font-semibold dark:text-white text-gray-900 mb-1">Call Us</h4>
-                <p class="dark:text-gray-400 text-gray-600 text-sm mb-2">Mon-Fri from 9am to 6pm</p>
+                <h4 class="font-semibold text-white mb-1">Call Us</h4>
+                <p class="text-gray-400 text-sm mb-2">Mon-Fri from 9am to 6pm</p>
                 <a href="tel:+1234567890" class="text-violet-500 hover:text-violet-400 font-medium">
                   +1 (234) 567-890
                 </a>
@@ -128,15 +128,15 @@
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl dark:bg-gray-800/50 bg-white border dark:border-gray-700/50 border-gray-200">
+          <div class="p-6 rounded-2xl bg-gray-800/50 border border-gray-700/50">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 to-rose-500/20 flex items-center justify-center shrink-0">
                 <Icon name="i-lucide-map-pin" class="w-6 h-6 text-pink-500" />
               </div>
               <div>
-                <h4 class="font-semibold dark:text-white text-gray-900 mb-1">Visit Us</h4>
-                <p class="dark:text-gray-400 text-gray-600 text-sm mb-2">Come say hello at our office</p>
-                <span class="dark:text-gray-300 text-gray-700">
+                <h4 class="font-semibold text-white mb-1">Visit Us</h4>
+                <p class="text-gray-400 text-sm mb-2">Come say hello at our office</p>
+                <span class="text-gray-300">
                   123 Innovation Drive<br />
                   San Francisco, CA 94107
                 </span>
@@ -152,7 +152,7 @@
             </p>
             <UButton
               variant="solid"
-              class="bg-white text-gray-900 hover:bg-gray-100"
+              class="bg-gray-950 text-white hover:bg-gray-800"
             >
               <Icon name="i-lucide-calendar" class="w-4 h-4 mr-2" />
               Schedule a Call

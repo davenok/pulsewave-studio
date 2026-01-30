@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen dark:bg-gray-950 bg-white">
+  <div class="min-h-screen bg-gray-950">
     <UiAppHeader />
 
     <main>

@@ -1,7 +1,7 @@
 <template>
   <section id="testimonials" class="relative py-24 lg:py-32 overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 dark:bg-gray-950 bg-white">
+    <div class="absolute inset-0 bg-gray-950">
       <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-violet-500/10 to-pink-500/10 blur-3xl" />
       <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-cyan-500/10 to-blue-500/10 blur-3xl" />
     </div>
@@ -12,10 +12,10 @@
         <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-emerald-500/10 text-emerald-500 mb-4">
           Testimonials
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold dark:text-white text-gray-900 mb-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           What Our <span class="gradient-text-cyan">Clients Say</span>
         </h2>
-        <p class="text-lg dark:text-gray-400 text-gray-600">
+        <p class="text-lg text-gray-400">
           Don't just take our word for it. Here's what our amazing clients have to say about working with us.
         </p>
       </div>
@@ -25,12 +25,12 @@
         <div
           v-for="(testimonial, index) in testimonials"
           :key="testimonial.name"
-          class="relative p-8 rounded-2xl dark:bg-gray-800/50 bg-white border dark:border-gray-700/50 border-gray-200 card-hover"
+          class="relative p-8 rounded-2xl bg-gray-800/50 border border-gray-700/50 card-hover"
           :class="{ 'lg:col-span-2': index === 0 }"
         >
           <!-- Quote Icon -->
           <div class="absolute top-6 right-6 opacity-10">
-            <Icon name="i-lucide-quote" class="w-16 h-16 dark:text-white text-gray-900" />
+            <Icon name="i-lucide-quote" class="w-16 h-16 text-white" />
           </div>
 
           <!-- Rating -->
@@ -44,7 +44,7 @@
           </div>
 
           <!-- Quote -->
-          <p class="dark:text-gray-300 text-gray-700 text-lg leading-relaxed mb-6">
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
             "{{ testimonial.quote }}"
           </p>
 
@@ -57,23 +57,23 @@
               {{ testimonial.initials }}
             </div>
             <div>
-              <h4 class="font-semibold dark:text-white text-gray-900">{{ testimonial.name }}</h4>
-              <p class="text-sm dark:text-gray-500 text-gray-500">{{ testimonial.role }}, {{ testimonial.company }}</p>
+              <h4 class="font-semibold text-white">{{ testimonial.name }}</h4>
+              <p class="text-sm text-gray-500">{{ testimonial.role }}, {{ testimonial.company }}</p>
             </div>
           </div>
 
           <!-- Company Logo Placeholder -->
           <div class="absolute bottom-8 right-8 opacity-30">
-            <Icon :name="testimonial.companyIcon" class="w-8 h-8 dark:text-gray-400 text-gray-500" />
+            <Icon :name="testimonial.companyIcon" class="w-8 h-8 text-gray-400" />
           </div>
         </div>
       </div>
 
       <!-- Trusted By Section -->
       <div class="mt-20 text-center">
-        <p class="text-sm dark:text-gray-500 text-gray-500 mb-8 uppercase tracking-wider">Trusted by innovative companies</p>
+        <p class="text-sm text-gray-500 mb-8 uppercase tracking-wider">Trusted by innovative companies</p>
         <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-50">
-          <Icon v-for="logo in companyLogos" :key="logo" :name="logo" class="w-10 h-10 dark:text-gray-400 text-gray-500" />
+          <Icon v-for="logo in companyLogos" :key="logo" :name="logo" class="w-10 h-10 text-gray-400" />
         </div>
       </div>
     </div>

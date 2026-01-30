@@ -2,7 +2,7 @@
   <header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
-      scrolled ? 'glass dark:bg-gray-900/80 bg-white/80 shadow-lg' : 'bg-transparent'
+      scrolled ? 'glass bg-gray-900/80 shadow-lg' : 'bg-transparent'
     ]"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@
             v-for="link in navLinks"
             :key="link.href"
             :to="link.href"
-            class="relative text-sm font-medium dark:text-gray-300 text-gray-600 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-300 group"
+            class="relative text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
           >
             {{ link.label }}
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-violet-500 group-hover:w-full transition-all duration-300" />
@@ -32,10 +32,6 @@
 
         <!-- Desktop Actions -->
         <div class="hidden md:flex items-center gap-4">
-          <UColorModeButton
-            variant="ghost"
-            class="hover:bg-gray-100 dark:hover:bg-gray-800"
-          />
           <UButton
             to="#contact"
             color="primary"
@@ -47,15 +43,11 @@
 
         <!-- Mobile Menu Button -->
         <div class="flex md:hidden items-center gap-2">
-          <UColorModeButton
-            variant="ghost"
-            size="sm"
-          />
           <UButton
             variant="ghost"
             size="sm"
             :icon="mobileMenuOpen ? 'i-lucide-x' : 'i-lucide-menu'"
-            class="dark:text-white text-gray-900"
+            class="text-white"
             @click="mobileMenuOpen = !mobileMenuOpen"
           />
         </div>
@@ -73,14 +65,14 @@
     >
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden glass dark:bg-gray-900/95 bg-white/95 border-t dark:border-gray-800 border-gray-200"
+        class="md:hidden glass bg-gray-900/95 border-t border-gray-800"
       >
         <div class="container mx-auto px-4 py-6 space-y-4">
           <NuxtLink
             v-for="link in navLinks"
             :key="link.href"
             :to="link.href"
-            class="block py-3 px-4 rounded-lg text-base font-medium dark:text-gray-300 text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
+            class="block py-3 px-4 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-cyan-400 transition-colors"
             @click="mobileMenuOpen = false"
           >
             {{ link.label }}

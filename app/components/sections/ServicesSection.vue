@@ -1,7 +1,7 @@
 <template>
   <section id="services" class="relative py-24 lg:py-32 overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 dark:bg-gray-900 bg-gray-50">
+    <div class="absolute inset-0 bg-gray-900">
       <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-to-br from-cyan-500/10 to-violet-500/10 blur-3xl" />
       <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-br from-violet-500/10 to-pink-500/10 blur-3xl" />
     </div>
@@ -12,11 +12,11 @@
         <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-500 mb-4">
           Our Services
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold dark:text-white text-gray-900 mb-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Everything You Need to
           <span class="gradient-text-cyan">Stand Out Online</span>
         </h2>
-        <p class="text-lg dark:text-gray-400 text-gray-600">
+        <p class="text-lg text-gray-400">
           From stunning designs to powerful development, we offer comprehensive 
           digital solutions that drive results.
         </p>
@@ -27,7 +27,7 @@
         <div
           v-for="(service, index) in services"
           :key="service.title"
-          class="group relative p-8 rounded-2xl dark:bg-gray-800/50 bg-white border dark:border-gray-700/50 border-gray-200 card-hover hover-glow-cyan"
+          class="group relative p-8 rounded-2xl bg-gray-800/50 border border-gray-700/50 card-hover hover-glow-cyan"
           :class="{ 'lg:col-span-2': index === 0 }"
         >
           <!-- Icon -->
@@ -39,16 +39,16 @@
           </div>
 
           <!-- Content -->
-          <h3 class="text-xl font-semibold dark:text-white text-gray-900 mb-3">
+          <h3 class="text-xl font-semibold text-white mb-3">
             {{ service.title }}
           </h3>
-          <p class="dark:text-gray-400 text-gray-600 mb-6 leading-relaxed">
+          <p class="text-gray-400 mb-6 leading-relaxed">
             {{ service.description }}
           </p>
 
           <!-- Features -->
           <ul class="space-y-2">
-            <li v-for="feature in service.features" :key="feature" class="flex items-center gap-2 text-sm dark:text-gray-400 text-gray-600">
+            <li v-for="feature in service.features" :key="feature" class="flex items-center gap-2 text-sm text-gray-400">
               <Icon name="i-lucide-check" class="w-4 h-4 text-cyan-500" />
               {{ feature }}
             </li>

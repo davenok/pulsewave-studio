@@ -1,7 +1,7 @@
 <template>
   <section id="work" class="relative py-24 lg:py-32 overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 dark:bg-gray-950 bg-white" />
+    <div class="absolute inset-0 bg-gray-950" />
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
@@ -10,13 +10,13 @@
           <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-500 mb-4">
             Our Portfolio
           </span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold dark:text-white text-gray-900">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Featured <span class="gradient-text">Projects</span>
           </h2>
         </div>
         <UButton
           variant="outline"
-          class="dark:border-gray-700 border-gray-300 dark:text-white text-gray-900 self-start md:self-auto"
+          class="border-gray-700 text-white self-start md:self-auto"
         >
           View All Projects
           <Icon name="i-lucide-arrow-right" class="w-4 h-4 ml-2" />
@@ -66,7 +66,7 @@
             <div class="flex items-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
               <UButton
                 size="sm"
-                class="bg-white text-gray-900 hover:bg-gray-100"
+                class="bg-gray-950 text-white hover:bg-gray-800"
               >
                 View Case Study
               </UButton>
@@ -84,11 +84,11 @@
       </div>
 
       <!-- Results Bar -->
-      <div class="mt-16 p-8 rounded-2xl dark:bg-gray-800/50 bg-gray-100 border dark:border-gray-700/50 border-gray-200">
+      <div class="mt-16 p-8 rounded-2xl bg-gray-800/50 border border-gray-700/50">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div v-for="result in results" :key="result.label" class="text-center">
             <div class="text-2xl sm:text-3xl font-bold gradient-text-cyan mb-1">{{ result.value }}</div>
-            <div class="text-sm dark:text-gray-400 text-gray-600">{{ result.label }}</div>
+            <div class="text-sm text-gray-400">{{ result.label }}</div>
           </div>
         </div>
       </div>

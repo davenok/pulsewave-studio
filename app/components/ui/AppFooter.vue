@@ -11,14 +11,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <!-- Brand Column -->
         <div class="lg:col-span-1">
-          <NuxtLink to="/" class="flex items-center gap-2 mb-6">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center">
-              <Icon name="i-lucide-zap" class="w-5 h-5 text-white" />
-            </div>
-            <span class="text-xl font-bold tracking-tight">
-              <span class="gradient-text-cyan">Pulsewave</span>
-              <span class="text-white">Studio</span>
-            </span>
+          <NuxtLink to="/" class="inline-block mb-6 group">
+            <NuxtImg
+              src="/pulse-logo.png"
+              alt="Pulsewave Studio"
+              height="48"
+              class="h-10 md:h-12 w-auto transform group-hover:scale-105 transition-transform duration-300"
+            />
           </NuxtLink>
           <p class="text-gray-400 mb-6 leading-relaxed">
             Crafting digital experiences that captivate, engage, and convert. Let's build something extraordinary together.
@@ -75,10 +74,10 @@
           </h4>
           <ul class="space-y-4">
             <li class="flex items-center gap-3">
-              <Icon name="i-lucide-mail" class="w-5 h-5 text-cyan-500" />
-              <a href="mailto:hello@pulsewave.studio" class="text-gray-400 hover:text-cyan-400 transition-colors">
-                hello@pulsewave.studio
-              </a>
+              <Icon name="i-lucide-message-circle" class="w-5 h-5 text-cyan-500" />
+              <NuxtLink to="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                Contact Us
+              </NuxtLink>
             </li>
             <li class="flex items-center gap-3">
               <Icon name="i-lucide-phone" class="w-5 h-5 text-cyan-500" />
@@ -90,7 +89,7 @@
               <Icon name="i-lucide-map-pin" class="w-5 h-5 text-cyan-500 mt-0.5" />
               <span class="text-gray-400">
                 123 Innovation Drive<br />
-                San Francisco, CA 94107
+                Broken Arrow, OK 74012
               </span>
             </li>
           </ul>
@@ -121,10 +120,9 @@
 const currentYear = new Date().getFullYear()
 
 const socials = [
-  { name: 'Twitter', icon: 'i-lucide-twitter', href: 'https://twitter.com' },
-  { name: 'LinkedIn', icon: 'i-lucide-linkedin', href: 'https://linkedin.com' },
-  { name: 'Instagram', icon: 'i-lucide-instagram', href: 'https://instagram.com' },
-  { name: 'GitHub', icon: 'i-lucide-github', href: 'https://github.com' }
+  { name: 'Twitter', icon: 'i-lucide-twitter', href: 'https://x.com/davidburklin' },
+  { name: 'LinkedIn', icon: 'i-lucide-linkedin', href: 'https://www.linkedin.com/in/david-burklin-b312b45/' },
+  { name: 'GitHub', icon: 'i-lucide-github', href: 'https://davenok.github.io/' }
 ]
 
 const quickLinks = [

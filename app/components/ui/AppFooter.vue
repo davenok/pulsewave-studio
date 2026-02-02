@@ -103,21 +103,127 @@
             © {{ currentYear }} Pulsewave Studio. All rights reserved.
           </p>
           <div class="flex gap-6 text-sm">
-            <NuxtLink to="/privacy" class="text-gray-500 hover:text-cyan-400 transition-colors">
+            <button
+              type="button"
+              class="text-gray-500 hover:text-cyan-400 transition-colors"
+              @click="privacyModalOpen = true"
+            >
               Privacy Policy
-            </NuxtLink>
-            <NuxtLink to="/terms" class="text-gray-500 hover:text-cyan-400 transition-colors">
+            </button>
+            <button
+              type="button"
+              class="text-gray-500 hover:text-cyan-400 transition-colors"
+              @click="termsModalOpen = true"
+            >
               Terms of Service
-            </NuxtLink>
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Privacy Policy Modal -->
+    <UModal v-model:open="privacyModalOpen">
+      <template #content>
+        <div class="p-6 max-h-[80vh] overflow-y-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-white">Privacy Policy</h2>
+            <UButton
+              icon="i-lucide-x"
+              variant="ghost"
+              color="neutral"
+              @click="privacyModalOpen = false"
+            />
+          </div>
+          <div class="prose prose-invert prose-sm max-w-none">
+            <p class="text-gray-400 text-sm mb-4">Last updated: {{ currentYear }}</p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Information We Collect</h3>
+            <p class="text-gray-400 mb-4">
+              When you contact us through our website, we collect the information you provide, including your name, email address, and any message content. We use this information solely to respond to your inquiries and provide our services.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">How We Use Your Information</h3>
+            <p class="text-gray-400 mb-4">
+              We use your information to communicate with you about our services, respond to your requests, and improve our website experience. We do not sell, trade, or otherwise transfer your personal information to third parties without your consent.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Cookies</h3>
+            <p class="text-gray-400 mb-4">
+              Our website may use cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings, though this may affect some functionality.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Data Security</h3>
+            <p class="text-gray-400 mb-4">
+              We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Contact Us</h3>
+            <p class="text-gray-400">
+              If you have questions about this Privacy Policy, please contact us through our website contact form.
+            </p>
+          </div>
+        </div>
+      </template>
+    </UModal>
+
+    <!-- Terms of Service Modal -->
+    <UModal v-model:open="termsModalOpen">
+      <template #content>
+        <div class="p-6 max-h-[80vh] overflow-y-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-white">Terms of Service</h2>
+            <UButton
+              icon="i-lucide-x"
+              variant="ghost"
+              color="neutral"
+              @click="termsModalOpen = false"
+            />
+          </div>
+          <div class="prose prose-invert prose-sm max-w-none">
+            <p class="text-gray-400 text-sm mb-4">Last updated: {{ currentYear }}</p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Agreement to Terms</h3>
+            <p class="text-gray-400 mb-4">
+              By accessing or using the Pulsewave Studio website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Services</h3>
+            <p class="text-gray-400 mb-4">
+              Pulsewave Studio provides web design, development, and digital branding services. Specific project terms, deliverables, timelines, and pricing are outlined in individual client agreements and proposals.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Intellectual Property</h3>
+            <p class="text-gray-400 mb-4">
+              All content on this website, including text, graphics, logos, and images, is the property of Pulsewave Studio and is protected by applicable intellectual property laws. Client work ownership is transferred upon full payment as outlined in individual project agreements.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Limitation of Liability</h3>
+            <p class="text-gray-400 mb-4">
+              Pulsewave Studio shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services. Our liability is limited to the amount paid for services rendered.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Changes to Terms</h3>
+            <p class="text-gray-400 mb-4">
+              We reserve the right to modify these terms at any time. Continued use of our website after changes constitutes acceptance of the updated terms.
+            </p>
+
+            <h3 class="text-lg font-semibold text-white mt-6 mb-3">Contact</h3>
+            <p class="text-gray-400">
+              For questions regarding these Terms of Service, please reach out through our contact form.
+            </p>
+          </div>
+        </div>
+      </template>
+    </UModal>
   </footer>
 </template>
 
 <script setup lang="ts">
 const currentYear = new Date().getFullYear()
+
+const privacyModalOpen = ref(false)
+const termsModalOpen = ref(false)
 
 const socials = [
   { name: 'Twitter', icon: 'i-lucide-twitter', href: 'https://x.com/davidburklin' },

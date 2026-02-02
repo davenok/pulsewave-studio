@@ -79,7 +79,7 @@
 const stats = [
   { value: '150+', label: 'Projects Completed' },
   { value: '50+', label: 'Happy Clients' },
-  { value: '12+', label: 'Years Experience' },
+  { value: '35+', label: 'Years Experience' },
   { value: '25+', label: 'Awards Won' }
 ]
 </script>

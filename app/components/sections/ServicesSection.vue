@@ -17,8 +17,11 @@
           <span class="gradient-text-cyan">Stand Out Online</span>
         </h2>
         <p class="text-lg text-gray-400">
-          From stunning designs to powerful development, we offer comprehensive 
-          digital solutions that drive results.
+          We combine creative design with technical expertise to deliver digital experiences 
+          that not only look exceptional but perform flawlessly. Whether you need a complete 
+          brand overhaul, a high-converting website, or ongoing support, our team works 
+          closely with you to understand your goals and craft solutions that resonate with 
+          your audience and drive measurable results.
         </p>
       </div>
 

@@ -62,7 +62,13 @@
                 :key="member.name"
                 class="relative group rounded-2xl overflow-hidden"
               >
-                <div :class="member.gradient" class="aspect-[3/4] w-full" />
+                <img
+                  v-if="member.image"
+                  :src="member.image"
+                  :alt="member.name"
+                  class="aspect-[3/4] w-full object-cover"
+                />
+                <div v-else :class="member.gradient" class="aspect-[3/4] w-full" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div class="absolute bottom-4 left-4 right-4">
                     <h4 class="text-white font-semibold">{{ member.name }}</h4>
@@ -77,7 +83,13 @@
                 :key="member.name"
                 class="relative group rounded-2xl overflow-hidden"
               >
-                <div :class="member.gradient" class="aspect-[3/4] w-full" />
+                <img
+                  v-if="member.image"
+                  :src="member.image"
+                  :alt="member.name"
+                  class="aspect-[3/4] w-full object-cover"
+                />
+                <div v-else :class="member.gradient" class="aspect-[3/4] w-full" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div class="absolute bottom-4 left-4 right-4">
                     <h4 class="text-white font-semibold">{{ member.name }}</h4>
@@ -117,7 +129,7 @@ const values = [
 ]
 
 const team = [
-  { name: 'Alex Morgan', role: 'Creative Director', gradient: 'bg-gradient-to-br from-cyan-400 to-blue-600' },
+  { name: 'David Burklin', role: 'Technical Oracle', image: '/david-burklin.jpg', gradient: 'bg-gradient-to-br from-cyan-400 to-blue-600' },
   { name: 'Jordan Lee', role: 'Lead Developer', gradient: 'bg-gradient-to-br from-violet-400 to-purple-600' },
   { name: 'Sam Chen', role: 'UX Designer', gradient: 'bg-gradient-to-br from-pink-400 to-rose-600' },
   { name: 'Taylor Kim', role: 'Project Manager', gradient: 'bg-gradient-to-br from-amber-400 to-orange-600' }
